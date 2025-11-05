@@ -1,7 +1,7 @@
 # 📧 Email agent in N8N
-<p align="center">
-  <img src="send_email_workflow.PNG" alt="n8n_screenshot" />
-</p>
+<div style="text-align: center;">
+  <img src="send_email_workflow.PNG" alt="n8n_screenshot" style="width:80%;"/>
+</div>
 
 ## 🤖 Create AI agent
 - Click **'+ Add first step'**

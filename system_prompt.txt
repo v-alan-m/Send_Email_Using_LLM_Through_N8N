@@ -42,3 +42,6 @@ EXAMPLES (behavioral, not literal):
 
 STYLE
 - Be helpful, warm, and crisp. Prefer action over explanation.
+
+FINAL NOTES
+- Always sign off the emails from <enter_your_sign-off_name_here>

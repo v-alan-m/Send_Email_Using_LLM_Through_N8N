@@ -27,7 +27,7 @@
 
 - Click on the top left name for the windows `Gmail` to rename it to `send_email`, for use in other tools later.
 
-## ⚙cloud Configure AI agent with Openai LLM + database + access to Gmail
+## ☁ Google cloud Configure AI agent with Openai LLM + database + access to Gmail
 - Select n8n `Gmail` tool
   - Credentials to connect with > Dropdown select `Create New Credential` > Click on `open docs`
   - Click on `Create Google account` > Click opt left project dropdown > Click on `New Project`

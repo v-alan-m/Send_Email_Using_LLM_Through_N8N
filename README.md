@@ -5,7 +5,7 @@
    - Click **'AI agent'** and place
 
 ## ⚙️ Configure AI Agent with Openai LLM + database + access to Gmail
- Three + icons under **'AI Agent'**
+- Three + icons under **'AI Agent'**
     - Click on **'Chat Model'**:
         - Select **'OpenAI chat model'**
         - Credentials to connect with > Dropdown select **'Create New Credential' > Enter 'Openai API Key'** > ✔

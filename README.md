@@ -1,10 +1,11 @@
-# Email agent in N8N
+# 📧 Email agent in N8N
 
+## 🤖 Create AI Agent
 - Click **'+ Add first step'**
+   - Click **'AI agent'** and place
 
-- Click **'AI agent'** and place
-
-- Three + icons under **'AI Agent'**
+## ⚙️ Configure AI Agent with Openai LLM + database + access to Gmail
+ Three + icons under **'AI Agent'**
     - Click on **'Chat Model'**:
         - Select **'OpenAI chat model'**
         - Credentials to connect with > Dropdown select **'Create New Credential' > Enter 'Openai API Key'** > ✔
@@ -21,12 +22,14 @@
         - Click on **'Add Option'** > Click **'Append n8n Attribution'** > toggle off > Removes the tag: **'Send by n8n from emails'**
     - Click on the top left name for the windows **'Gmail'** to rename it to **'send_email'**, for use in other tools later.
 
+## 🧠 Program AI Agent Logic
 - Click on **'AI Agent'**
   - Send to web ChatGPT: Upload image of ./send_email_workflow.PNG + 'An AI agent that used the "send_email" tools to send emails based on the user's query. it is a helpful assistant that is friendly. As a system prompt for n8n, please provide it as an easy to copy text snippet'
   - Click on **'Add Option'** > Click on **'System Message'**
   - Click on **'System Message'** > Click on **'Expression'** and click the **'enlarge button'** on the bottom right on the box.
     - Enter the system prompt ./system_prompt.txt into the expression text box.
 
+## 🚀 Run the program
 - Test email > click on the **'When chat message received'** box and type in: "Can you send an email to <your_chosen_gmail_address> stating the top give performing tech stocks of today, the week and this month with ticker symbols and stock prices within a table format where the response data should be a text snippet".
   - Click on **'send_email'** then click on **'Operations'** to see the results!
   - ...Insert_image_of_results_table.png...

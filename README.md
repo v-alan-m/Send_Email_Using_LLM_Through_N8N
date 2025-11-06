@@ -6,6 +6,12 @@
 - Click `+ Add first step`
    - Click `AI agent` and place
 
+## 🧠 Program AI Agent Logic
+- Send to web ChatGPT: Upload image of ./send_email_workflow.PNG + 'Create a system prompt for an n8n 'AI agent', taking into considerations the tools attached based the image attached, that used the "send_email" tools to send emails based on the user's query. it is a helpful assistant that is friendly. As a system prompt for n8n, also add a tool called "contacts_database" that the agent will use to retrieve contact data such as names, email addresses and phone numbers. Please provide it as an easy to copy text snippet as your response.'
+  - Click on `AI Agent` > `Add Option` > `System Message`
+  - Click on `Expression` and click the `enlarge button` on the bottom right on the box.
+  - Enter the system prompt ./system_prompt.txt into the expression text box.
+
 ## ⚙️ Configure AI agent with Openai LLM + database + access to Gmail
 - Three + icons under `AI Agent`
 
@@ -58,12 +64,6 @@
     - Credentials to connect with > Dropdown select `Create New Credential` > Click on `Sign in with Google`
     - Click on `Continue` Click on `Select all` > Click on `Continue`
     - Left column, click 'Enables APIs and services' > Search for `Gmail Docs API` > Click on `Enable`
-
-## 🧠 Program AI Agent Logic
-- Send to web ChatGPT: Upload image of ./send_email_workflow.PNG + 'Create a system prompt for an n8n 'AI agent', taking into considerations the tools attached based the image attached, that used the "send_email" tools to send emails based on the user's query. it is a helpful assistant that is friendly. As a system prompt for n8n, also add a tool called "contacts_database" that the agent will use to retrieve contact data such as names, email addresses and phone numbers. Please provide it as an easy to copy text snippet as your response.'
-  - Click on `AI Agent` > `Add Option` > `System Message`
-  - Click on `Expression` and click the `enlarge button` on the bottom right on the box.
-  - Enter the system prompt ./system_prompt.txt into the expression text box.
 
 ## 📑 Add a contacts book (so emails can be sent by asking to email a particular person)
 - Create a contacts book: Go to `Google sheets`

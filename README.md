@@ -2,23 +2,28 @@
 | ![n8n_screenshot](send_email_workflow.PNG) |
 |:------------------------------------------:|
 
-## 🤖 Create AI agent
+## 🧠 Create and program AI agent
 - Click `+ Add first step`
-   - Click `AI agent` and place
-
-## 🧠 Program AI Agent Logic
+   - Click `AI agent`
+  
 - Send to web ChatGPT: Upload image of ./send_email_workflow.PNG + 'Create a system prompt for an n8n 'AI agent', taking into considerations the tools attached based the image attached, that used the "send_email" tools to send emails based on the user's query. it is a helpful assistant that is friendly. As a system prompt for n8n, also add a tool called "contacts_database" that the agent will use to retrieve contact data such as names, email addresses and phone numbers. Please provide it as an easy to copy text snippet as your response.'
-  - Click on `AI Agent` > `Add Option` > `System Message`
+- 
+- Click on `AI Agent` > `Add Option` > `System Message`
   - Click on `Expression` and click the `enlarge button` on the bottom right on the box.
-  - Enter the system prompt ./system_prompt.txt into the expression text box.
+  - Enter the system prompt [system_prompt.txt](./system_prompt.txt) into the expression text box.
 
 ## ⚙️ Configure AI agent with Openai LLM + database + access to Gmail
-- Three + icons under `AI Agent`
+- Target: Three + icons under `AI Agent`
 
 - Click on `Chat Model`:
     - Select `OpenAI chat model`
-    - Credentials to connect with > Dropdown select `Create New Credential' > Enter 'Openai API Key` > ✔
-    - Choose LLM model: gtp-4o-mini
+    - Credentials to connect with > Dropdown select `Create New Credential`
+- Vist [openai site](https://platform.openai.com/) 
+  - Create account > Top right, settings: Click on `gear icon` > Click `API Keys`
+  - Click `Create a new secret key` > Type `name` > Click on `Create secret key` > Click on `Copy`
+
+- On n8n in Openai account > Enter `API Key` > Click on `Save`
+  - Choose LLM model: gtp-4.1-mini
 
 - To remember previous chats we need memory so click on `Memory`:
     - Select `Window Buffer Memory`

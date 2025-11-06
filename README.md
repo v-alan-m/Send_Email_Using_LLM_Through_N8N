@@ -26,7 +26,7 @@
   - Choose LLM model: gtp-4.1-mini
 
 - To remember previous chats we need memory so click on `Memory`:
-    - Select `Window Buffer Memory`
+    - Select `Simply Memory`
 
 - Click on `'Tool'`:
     - Select `'Gmail'`

@@ -13,9 +13,9 @@
   - Enter the system prompt [system_prompt.txt](./system_prompt.txt) into the expression text box.
 
 ## ⚙️ Configure AI agent with Openai LLM + database + access to Gmail
-- Target: Three + icons under `AI Agent`
+- Target: Three 
 
-- Click on `Chat Model`:
+- Click on `Chat Model` + icon under `AI Agent`:
     - Select `OpenAI chat model`
     - Credentials to connect with > Dropdown select `Create New Credential`
 - Vist [openai site](https://platform.openai.com/) 
@@ -39,7 +39,8 @@
 - Click on the top left name for the windows `Gmail` to rename it to `send_email`, for use in other tools later.
 
 ## ☁ Google cloud Configure AI agent with Openai LLM + database + access to Gmail
-- Select n8n `Gmail` tool
+- Click on `Tool` + icon under `AI Agent` 
+  - Select `Gmail`
   - Credentials to connect with > Dropdown select `Create New Credential` > Click on `open docs`
   - Click on `Create Google account` > Click opt left project dropdown > Click on `New Project`
     - Type project name, e.g: `n8n` > Click on `Create` > Top right notifications > Click `Select Project`

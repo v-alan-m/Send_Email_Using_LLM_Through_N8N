@@ -62,7 +62,8 @@
   - Click `Create`
     - Copy `Client ID` from Google Cloud > Paste into n8n: `Client ID`
     - Copy `Client Secret` from Google Cloud > Paste into n8n: `Client secret`
-  - In GCP click `Audience` from the left menu > Click on `Publish app`
+  - In GCP click `Audience` from the left menu > Under Test User, click on `Add users`
+    - Enter your n8n `email address(es)` > Click on `Add`
   - In n8n click on `Sign in with Google`  
   > - For all google services, within n8n, you will now be able to simply click `Sign in`!
 

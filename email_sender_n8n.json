@@ -1,0 +1,117 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        64,
+        -192
+      ],
+      "id": "0d9f26f9-01b8-4eda-ba2a-6190bf1a3cbd",
+      "name": "When chat message received",
+      "webhookId": "4754bc98-2f38-4fde-8c0b-454b9c250a62"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=You are a friendly and helpful AI assistant that responds to user chat messages and performs tasks using connected tools.\n\nYour main goal is to help the user by:\n1. Understanding their query.\n2. Using the available tools effectively to retrieve data and perform actions.\n\nYou have access to the following tools:\n\n- **send_email**: Use this tool to send emails. It requires parameters such as recipient email address, subject, and body text. Always ensure the email address is valid and message content is clear and polite.\n- **contacts_database**: Use this tool to look up contact information such as names, email addresses, and phone numbers. Retrieve these details when the user asks to contact someone or when you need to find a recipient for an email.\n- **window_buffer_memory**: Keeps track of recent conversation context to maintain continuity in your responses.\n\nGuidelines:\n- Always confirm or clarify user intent before taking an action (like sending an email).\n- Be friendly, concise, and professional in your communication.\n- When the user asks to send an email to someone, first search the `contacts_database` for their details.\n- Once you have the recipient information, use the `send_email` tool to send the message.\n- If you cannot find a contact, politely inform the user and ask for more information.\n\nExample interaction:\nUser: \"Send an email to Sarah about tomorrow's meeting.\"\nAI: (1) Use `contacts_database` to find Sarah’s email.\n    (2) Compose a short, polite message about the meeting.\n    (3) Use `send_email` to send it.\n    (4) Confirm success to the user.\n\nYou are always friendly, helpful, and efficient.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        272,
+        -192
+      ],
+      "id": "997bcf82-6e32-4fc2-8963-8ddbbf1467ed",
+      "name": "AI Agent",
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        144,
+        16
+      ],
+      "id": "c3c0234a-1eec-445a-909d-ca4636d160be",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "pbTYM4rpwU1j1QEl",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        304,
+        16
+      ],
+      "id": "e13b2a81-3c07-44a0-96cf-71f1ee9efa54",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f96d1280-b4b3-4425-a292-3c5d23913629",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8d9ddbd13e11751c1ecad0ba06ead410e4962c38af75b6cac35f07aaa94062b2"
+  },
+  "id": "g5zlzwR8u1hjcKRi",
+  "tags": []
+}

@@ -43,41 +43,34 @@
 - Click on `Tool` + icon under `AI Agent` 
   - Select `Gmail`
   - Using n8n `cloud`: Under `Credentials to connect with` > From dropdown select `Create New Credential` > Click `Sign in with Google` and login in with `all permissions ticked`
-  - You can skip the steps below and move onto `🕹️ Enable Google services in Google Cloud`
+  - You can skip the steps below and move onto [🕹️ Enable Google services in Google Cloud:](#-enable-google-services-in-google-cloud)
 <br><br>
 - Using n8n `self-hosted: Under` `Credentials to connect with` > From dropdown select `Create New Credential` > Click on `open docs`
-  - Click on `Create Google account` > Click top left project dropdown > Click on `New Project`
-    - Type project name, e.g: `n8n projects` > Click on `Create` > Top right notifications > Click `Select Project`
-    - Top left click on `hamburger menu` > Hover on `API and Services` > Click on `OAuth consent screen`
+- Click on `Create Google account` > Click top left project dropdown > Click on `New Project`
+  - Type project name, e.g: `n8n projects` > Click on `Create` > Top right notifications > Click `Select Project`
+  - Top left click on `hamburger menu` > Hover on `API and Services` > Click on `OAuth consent screen`
 <br><br>
-  - Click on `Get Started`
-    - Type App name e.g: `n8n_email_sender` > Select `External`
-    - Type contact email `email_address`
-    - Type developer email `email_address`
-    - Click on `Save and continue` > On next page click on `Save and continue`
+- Click on `Get Started` if you see this option, if not click on `Create OAuth Client`
+  - Type App name e.g: `n8n_email_sender` > Select `External`
+  - Type contact email `email_address`
+  - Type developer email `email_address`
+  - Click on `Save and continue` > On next page click on `Save and continue`
 <br><br>
-  - CLick on `Create OAuth Client`
-    - Select `Web Application` > Type name: `n8n_email_sender`
-    - From n8n, copy URL `OAuth Redirect URL` > Google Cloud, Authorized redirect URIs, click on `Add URI` > Paste `OAuth Redirect URL` > Click on `Create`
-      - Copy `Client ID` from Google Cloud > Paste into n8n: `Client ID`
-      - Copy `Client Secret` from Google Cloud > Paste into n8n: `Client secret`
+- CLick on `Create OAuth Client`
+  - Select `Web Application` > Type name: `n8n_email_sender`
+  - From n8n, copy URL `OAuth Redirect URL` > Google Cloud, Authorized redirect URIs, click on `Add URI` > Paste `OAuth Redirect URL`
+  - Click `Create`
+    - Copy `Client ID` from Google Cloud > Paste into n8n: `Client ID`
+    - Copy `Client Secret` from Google Cloud > Paste into n8n: `Client secret`
+  - In GCP click `Audience` from the left menu > Click on `Publish app`
+  - In n8n click on `Sign in with Google`  
+  > - For all google services, within n8n, you will now be able to simply click `Sign in`!
 
-## 🕹️ Enable Google services in Google Cloud:
-  - Select n8n `Google drive` tool
-    - Credentials to connect with > Dropdown select `Create New Credential` > Click on `Sign in with Google`
-    - Click on `Continue` Click on `Select all` > Click on `Continue`
-      - On `Google Cloud` > Left column, click `Enabled APIs and services`
-        - Search for `Google Drive API` > Click on `Enable`
-  - Select n8n `Gmail` tool
-    - Credentials to connect with > Dropdown select `Create New Credential` > Click on `Sign in with Google`
-    - Click on `Continue` Click on `Select all` > Click on `Continue`
-      - On `Google Cloud` > Left column, click `Enabled APIs and services`
-        - Search for `Gmail API` > Click on `Enable`
-  - Select n8n `Gmail Docs` tool
-    - Credentials to connect with > Dropdown select `Create New Credential` > Click on `Sign in with Google`
-    - Click on `Continue` Click on `Select all` > Click on `Continue`
-      - On `Google Cloud` > Left column, click `Enabled APIs and services`
-        - Search for `Google Docs API` > Click on `Enable`
+### 🕹️ Enable Google services in Google Cloud:
+  - On `Google Cloud` > Left column, click `Enabled APIs and services`
+    - Search for `Google Drive API` > Click on `Enable`
+    - Search for `Gmail API` > Click on `Enable`
+    - Search for `Google Sheets API` > Click on `Enable`
 
 ## 📑 Add a contacts book (so emails can be sent by asking to email a particular person)
 - Create a contacts book: Go to `Google sheets`

@@ -57,7 +57,7 @@
   - Click on `Save and continue` > On next page click on `Save and continue`
 <br><br>
 - CLick on `Create OAuth Client`
-  - Select `Web Application` > Type name: `n8n_email_sender`
+  - Select `Web Application` > Type name: `n8n_sheets`
   - From n8n, copy URL `OAuth Redirect URL` > Google Cloud, Authorized redirect URIs, click on `Add URI` > Paste `OAuth Redirect URL`
   - Click `Create`
     - Copy `Client ID` from Google Cloud > Paste into n8n: `Client ID`
@@ -65,7 +65,7 @@
   - In GCP click `Audience` from the left menu > Under Test User, click on `Add users`
     - Enter your n8n `email address(es)` > Click on `Add`
   - In n8n click on `Sign in with Google`  
-  > - For all google services, within n8n, you will now be able to simply click `Sign in`!
+  > - To add more services, such as Gmail, repeat this process, click from the left menu > `Client` > `Create client` 
 
 ### 🕹️ Enable Google services in Google Cloud:
   - On `Google Cloud` > Left column, click `Enabled APIs and services`

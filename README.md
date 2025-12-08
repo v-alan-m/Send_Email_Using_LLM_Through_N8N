@@ -41,11 +41,9 @@
 
 ## ☁ Google cloud Configure AI agent with Openai LLM + database + access to Gmail
 - Click on `Tool` + icon under `AI Agent` 
-  - Select `Gmail`
-  - Using n8n `cloud`: Under `Credentials to connect with` > From dropdown select `Create New Credential` > Click `Sign in with Google` and login in with `all permissions ticked`
-  - You can skip the steps below and move onto [🕹️ Enable Google services in Google Cloud:](#-enable-google-services-in-google-cloud)
-<br><br>
-- Using n8n `self-hosted: Under` `Credentials to connect with` > From dropdown select `Create New Credential` > Click on `open docs`
+  - Select a Google services, these steps below will have to be repeated for each google services, e.g `Google sheet/Gmail/etc.`
+  - Using n8n `cloud`: Under `Credentials to connect with` > From dropdown select `Create New Credential` > Click on `open docs`
+<br><br>  
 - Click on `Create Google account` > Click top left project dropdown > Click on `New Project`
   - Type project name, e.g: `n8n projects` > Click on `Create` > Top right notifications > Click `Select Project`
   - Top left click on `hamburger menu` > Hover on `API and Services` > Click on `OAuth consent screen`
